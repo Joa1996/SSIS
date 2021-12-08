@@ -1,0 +1,1395 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/14/2021 3:55:59 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-7A5VFUD"
+  DTS:CreatorName="DESKTOP-7A5VFUD\Dell"
+  DTS:DTSID="{CCAE11E9-611C-4268-84BB-DB59CB6E01FE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{B46B2803-53CF-40EC-A689-2FB4A58B23BD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7CEC3DB3-03D4-4380-BADC-1BCF20ED90EB}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Curso_SSIS\Prácticas\Origenes\Morosos.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DA7162E0-CC14-40CF-A32F-32B2B1F274DC}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\ReporteCoincidentedeCache.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{5B17226E-4DD9-4D7E-B26B-18BDBDE3053B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre"
+              DTS:DTSID="{6A12D0E8-9B96-4252-9B77-EA4052AD4EC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Saldo"
+              DTS:DTSID="{BD6BB6C9-94FB-4B5B-B775-FB91E70BD1A3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8B33CE75-6D56-4644-8975-423A0E68ABB4}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\ReportenoCoincidentedeCache.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{60E19151-78D4-4DB8-BA25-9CABDB83C7CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre"
+              DTS:DTSID="{555F6A3D-C953-4E97-84E9-B14333DB8B97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Saldo"
+              DTS:DTSID="{D4948730-66FE-4FBF-9222-B6FF0EABFFE1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de caché]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{1A227A3D-F8E3-41BE-A340-69FF554B9FDF}"
+      DTS:ObjectName="Administrador de conexiones de caché">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:UseFile="True"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\MorososCache.caw">
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="3"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{1A80B1A2-34C4-4719-969E-3A0A47D254EE}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="Monto"
+              DTS:DTSID="{C98F3568-3172-4500-9563-6F48857E0D88}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de caché 1]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{406D1265-E2D0-456B-BC42-8DB9B9957A87}"
+      DTS:ObjectName="Administrador de conexiones de caché 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:UseFile="True"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\MorososCache.caw">
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{FB79EE11-179F-4935-ACDD-3399FC6C66F0}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="Monto"
+              DTS:DTSID="{9BE5729A-CA75-4C5C-B8E2-C5A04D160AB3}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="130"
+              DTS:Length="50"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="Copia de ID"
+              DTS:DTSID="{58E9C45A-1531-47EE-BC74-9F150915574E}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de caché 2]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{3F7C3C7C-875C-4AB9-92C1-683775275BE2}"
+      DTS:ObjectName="Administrador de conexiones de caché 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:UseFile="True"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\MorososCache.caw">
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{48356D7D-4E97-4639-8FE4-CC9A54C4CB74}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="Monto"
+              DTS:DTSID="{45660B6F-E196-4D35-8062-D2557D2353BD}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="19"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="Copia de ID"
+              DTS:DTSID="{9FC44AC5-144E-4CE0-B9A0-0A9714915B91}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="Copia de Monto"
+              DTS:DTSID="{86E2C318-E3A7-4170-B580-E5E4DD035472}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de caché 3]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{9FC008CC-D900-40B7-A4F6-D78C48E6F861}"
+      DTS:ObjectName="Administrador de conexiones de caché 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:UseFile="True"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\MorososCache.caw">
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{B2352D34-40D1-42DA-9EE7-C1F23CC44A79}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="Monto"
+              DTS:DTSID="{58FD62AD-477E-4205-8E83-B3305C3479FE}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="19"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="Copia de ID"
+              DTS:DTSID="{3E6FA882-DD05-4521-9090-98590654F1DD}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="Copia de Monto"
+              DTS:DTSID="{56EBCFB3-E00E-4FEC-8E90-8B6966832B73}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de caché 4]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{178934B5-ACA4-4BE7-A78A-6BD1FBB6766E}"
+      DTS:ObjectName="Administrador de conexiones de caché 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:UseFile="True"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\MorososCache.caw">
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{E0E375D8-F779-4654-87B6-F6C98FFF23E7}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="5"
+              DTS:ObjectName="Monto"
+              DTS:DTSID="{DDA16F83-0923-4D88-9FE1-F7225F61204F}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="130"
+              DTS:Length="50"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="Copia de ID"
+              DTS:DTSID="{605AD564-4169-44BF-90D2-A582B375E2A9}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-7A5VFUD\SQLSERVER.SSIS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DCE6675D-57C5-464A-A689-3E35B3473424}"
+      DTS:ObjectName="DESKTOP-7A5VFUD\SQLSERVER.SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-7A5VFUD\SQLSERVER;Initial Catalog=SSIS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{EF7A5A4C-038B-4FDD-A0A5-ABC2C0D40474}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ID]"
+                      cachedDataType="r8"
+                      cachedName="ID"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ID]"
+                      name="Copia de ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Origen de Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Origen de Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ID]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Monto]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Monto]"
+                      name="Monto"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Monto]"
+                      dataType="r8"
+                      name="Monto" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Monto]"
+                      name="Monto" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Transformación de caché"
+              componentClassID="Microsoft.Cache"
+              contactInfo="Transformación de caché;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Escribe datos en una memoria caché (archivo .caw) con el Administrador de conexiones de caché. Para reducir la carga de la base de datos, se debe reutilizar la memoria caché entre varias transformaciones Búsqueda. Para reducir el uso de la memoria, se debe compartir la memoria caché. Nota: los datos de la memoria caché se almacenan sin cifrar, por lo que no se recomienda su uso para información confidencial."
+              name="Transformación de caché"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Transformación de caché.Connections[CacheConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de caché 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de caché 1]"
+                  description="Conexión utilizada para tener acceso a la caché."
+                  name="CacheConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Transformación de caché.Inputs[Entrada de caché]"
+                  hasSideEffects="true"
+                  name="Entrada de caché">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Transformación de caché.Inputs[Entrada de caché].Columns[Monto]"
+                      cachedDataType="r8"
+                      cachedName="Monto"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Monto]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Columna de caché asociada a la columna de entrada."
+                          name="CacheColumnName">Monto</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Transformación de caché.Inputs[Entrada de caché].Columns[ID]"
+                      cachedDataType="r8"
+                      cachedName="ID"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Columna de caché asociada a la columna de entrada."
+                          name="CacheColumnName">ID</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Transformación de caché.Inputs[Entrada de caché].Columns[Copia de ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copia de ID"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Columna de caché asociada a la columna de entrada."
+                          name="CacheColumnName">Copia de ID</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Transformación de caché.Outputs[Salida de caché]"
+                  name="Salida de caché"
+                  synchronousInputId="Package\Tarea Flujo de datos\Transformación de caché.Inputs[Entrada de caché]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+              endId="Package\Tarea Flujo de datos\Transformación de caché.Inputs[Entrada de caché]"
+              name="Salida de conversión de datos"
+              startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+              endId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de Excel"
+              startId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{BAB2FAAC-524D-4E75-98BE-9AB7919CE826}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from () [refTable]
+where [refTable].[Copia de ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Monto" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Copia de ID" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Búsqueda.Connections[CacheConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de caché 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de caché 4]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="CacheConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Búsqueda.Inputs[Entrada de búsqueda].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ID"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">Copia de ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Destino de archivo plano"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de archivo plano"
+              localeId="3082"
+              name="Destino de archivo plano"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cuando el calificador de texto está habilitado, especifica si este contendrá secuencias de escape o no en los datos escritos en el archivo de destino."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+                  hasSideEffects="true"
+                  name="Entrada de destino de archivo plano">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ID]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Nombre"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nombre]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nombre]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Saldo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Saldo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Saldo]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Saldo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="20"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Saldo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Saldo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de archivo plano"
+              localeId="3082"
+              name="Destino de archivo plano 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cuando el calificador de texto está habilitado, especifica si este contendrá secuencias de escape o no en los datos escritos en el archivo de destino."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano]"
+                  hasSideEffects="true"
+                  name="Entrada de destino de archivo plano">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[ID]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].Columns[Nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Nombre"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nombre]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nombre]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].Columns[Saldo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Saldo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[Saldo]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Saldo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="20"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[Saldo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Saldo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[ID_Clientes]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-7A5VFUD\SQLSERVER.SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-7A5VFUD\SQLSERVER.SSIS]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nombre]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nombre]"
+                      name="Nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Saldo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Saldo]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Saldo]"
+                      name="Saldo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="20"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Saldo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Saldo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nombre]"
+                      name="Nombre" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Saldo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Saldo]"
+                      name="Saldo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Tarea Flujo de datos 1\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\Tarea Flujo de datos 1\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos 1\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Salida de origen de OLE DB]"
+              endId="Package\Tarea Flujo de datos 1\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de datos 1\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{B08CC337-AAED-4A2D-B2C4-8389F04547D5}"
+      DTS:From="Package\Tarea Flujo de datos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Tarea Flujo de datos 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="186,20" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Flujo de datos 1"
+          TopLeft="158,170" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="274,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-23.5,108"
+              Start="0,0"
+              End="-23.5,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50"
+                    Point2="0,54"
+                    Point3="-4,54" />
+                  <mssgle:LineSegment
+                    End="-19.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.5,54"
+                    Point2="-23.5,54"
+                    Point3="-23.5,58" />
+                  <mssgle:LineSegment
+                    End="-23.5,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Tarea Flujo de datos\Origen de Excel"
+          TopLeft="129,25" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Tarea Flujo de datos\Transformación de caché"
+          TopLeft="98,220" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Tarea Flujo de datos\Conversión de datos"
+          TopLeft="121,114" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+          TopLeft="207,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          TopLeft="208.5,156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,64"
+              Start="0,0"
+              End="-12,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="-4,32" />
+                  <mssgle:LineSegment
+                    End="-8,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,32"
+                    Point2="-12,32"
+                    Point3="-12,36" />
+                  <mssgle:LineSegment
+                    End="-12,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Tarea Flujo de datos 1\Destino de archivo plano"
+          TopLeft="91,261" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Tarea Flujo de datos 1\Búsqueda"
+          TopLeft="215,142" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Tarea Flujo de datos 1\Origen de OLE DB"
+          TopLeft="193,46" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 1.Paths[Salida de origen de OLE DB]"
+          TopLeft="276.25,88">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 1.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="277.5,184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-89,77"
+              Start="0,0"
+              End="-89,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="-4,38.5" />
+                  <mssgle:LineSegment
+                    End="-85,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-85,38.5"
+                    Point2="-89,38.5"
+                    Point3="-89,42.5" />
+                  <mssgle:LineSegment
+                    End="-89,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-144.3190234375,43.5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Tarea Flujo de datos 1\Destino de archivo plano 1"
+          TopLeft="414,322" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 1.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="297,184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="219.5,138"
+              Start="0,0"
+              End="219.5,130.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.2464454976303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.2464454976303"
+                    Point2="0,56.2464454976303"
+                    Point3="4,56.2464454976303" />
+                  <mssgle:LineSegment
+                    End="215.5,56.2464454976303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="215.5,56.2464454976303"
+                    Point2="219.5,56.2464454976303"
+                    Point3="219.5,60.2464454976303" />
+                  <mssgle:LineSegment
+                    End="219.5,130.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.8609765625,61.2464454976303,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos 1\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos 1\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

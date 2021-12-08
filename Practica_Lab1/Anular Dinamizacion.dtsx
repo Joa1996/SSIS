@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/18/2021 12:33:17 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-7A5VFUD"
+  DTS:CreatorName="DESKTOP-7A5VFUD\Dell"
+  DTS:DTSID="{07EDD8EE-166C-4188-AA60-FFA6D9356D5A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{25C1DA10-8C39-4AD8-98EC-23D884D17D52}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{4DF61487-79BD-44F1-9DB8-5300795EB5C3}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Curso_SSIS\Prácticas\Origenes\AnularDinamizacion.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D48EA1D8-A175-4880-B5B1-4A41342939DB}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Curso_SSIS\Prácticas\Destinos\SalidaDinamizacion.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{B256D8AC-9CE2-43C8-8DF9-D983956A783C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_ [Abril]_Monto"
+              DTS:DTSID="{9F5EF613-0F87-42A1-A668-BE5FE6FF41F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Agosto_Monto"
+              DTS:DTSID="{F6161A0D-CC47-49F2-9FBD-CA18188C8D34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Diciembre_Monto"
+              DTS:DTSID="{4C908A7B-BE64-4122-83DF-B3FD2B70902A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Enero_Monto"
+              DTS:DTSID="{F05D40D7-F3A9-4484-93E2-46708840FEEC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Febrero_Monto"
+              DTS:DTSID="{126DE03C-FC0D-4350-9915-540465CD9D5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Julio_Monto"
+              DTS:DTSID="{2A0621B7-7971-4D2A-83DC-5D2E06B51DE4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Junio_Monto"
+              DTS:DTSID="{937C1CE7-E32E-4F19-8B61-52A2BB471E92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Marzo_Monto"
+              DTS:DTSID="{7E30909B-D550-4F87-A654-553CB793F00A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Mayo_Monto"
+              DTS:DTSID="{0A392DE2-A550-4CB3-8C6A-9EDA774F8E22}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Noviembre_Monto"
+              DTS:DTSID="{BF7BBAF8-4663-4FAC-9BA4-9DF74AD1D1A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Octubre_Monto"
+              DTS:DTSID="{A07C286D-F54E-4CDE-BA1C-EFE9D9AF3D0B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C_Septiembre_Monto"
+              DTS:DTSID="{0D858D68-BB1A-4D38-BB60-399559AC0C36}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{52455A3D-0961-44CA-8760-C61402B9F09D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Agregado"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="Agregado"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[ID]"
+                      cachedDataType="r8"
+                      cachedName="ID"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[Meses]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Meses"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Meses]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1].Columns[Monto]"
+                      cachedDataType="r8"
+                      cachedName="Monto"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Monto]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[ID]"
+                      name="ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Meses]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Meses]"
+                      name="Meses">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Meses]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]"
+                      name="Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Monto]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de archivo plano"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de archivo plano"
+              localeId="3082"
+              name="Destino de archivo plano"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cuando el calificador de texto está habilitado, especifica si este contendrá secuencias de escape o no en los datos escritos en el archivo de destino."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de archivo plano.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+                  hasSideEffects="true"
+                  name="Entrada de destino de archivo plano">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[ID]"
+                      cachedDataType="r8"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ID]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_ [Abril]_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_ [Abril]_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_ [Abril]_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_ [Abril]_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Agosto_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Agosto_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Agosto_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Agosto_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Diciembre_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Diciembre_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Diciembre_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Diciembre_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Enero_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Enero_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Enero_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Enero_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Febrero_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Febrero_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Febrero_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Febrero_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Julio_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Julio_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Julio_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Julio_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Junio_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Junio_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Junio_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Junio_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Marzo_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Marzo_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Marzo_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Marzo_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Mayo_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Mayo_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Mayo_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Mayo_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Noviembre_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Noviembre_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Noviembre_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Noviembre_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Octubre_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Octubre_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Octubre_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Octubre_Monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[C_Septiembre_Monto]"
+                      cachedDataType="r8"
+                      cachedName="C_Septiembre_Monto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Septiembre_Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Septiembre_Monto]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_ [Abril]_Monto]"
+                      dataType="r8"
+                      name="C_ [Abril]_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Agosto_Monto]"
+                      dataType="r8"
+                      name="C_Agosto_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Diciembre_Monto]"
+                      dataType="r8"
+                      name="C_Diciembre_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Enero_Monto]"
+                      dataType="r8"
+                      name="C_Enero_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Febrero_Monto]"
+                      dataType="r8"
+                      name="C_Febrero_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Julio_Monto]"
+                      dataType="r8"
+                      name="C_Julio_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Junio_Monto]"
+                      dataType="r8"
+                      name="C_Junio_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Marzo_Monto]"
+                      dataType="r8"
+                      name="C_Marzo_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Mayo_Monto]"
+                      dataType="r8"
+                      name="C_Mayo_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Noviembre_Monto]"
+                      dataType="r8"
+                      name="C_Noviembre_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Octubre_Monto]"
+                      dataType="r8"
+                      name="C_Octubre_Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[C_Septiembre_Monto]"
+                      dataType="r8"
+                      name="C_Septiembre_Monto" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Dinamización"
+              componentClassID="Microsoft.Pivot"
+              contactInfo="Dinamización;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Compacta un flujo de datos de entrada dinamizándolo con un valor de columna, de modo que pasa a ser menos normalizado. Los datos de entrada deben ordenarse por la columna dinámica porque se produce una dinamización cada vez que cambian los datos de la columna dinámica. Nota: si hay filas duplicadas, se generará un error en esta transformación."
+              name="Dinamización"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Hace que la transformación de dinamización omita las filas que contienen valores no reconocidos en la columna Clave dinámica y registre la lista completa de valores no coincidentes al final de la ejecución del flujo de datos. Sirve para recopilar una lista de valores de filas de entrada, que se puede usar para generar automáticamente columnas de salida."
+                  name="PassThroughUnmatchedPivotKeys">true</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Dinamización.Inputs[Entrada predeterminada dinámica]"
+                  hasSideEffects="true"
+                  name="Entrada predeterminada dinámica">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Inputs[Entrada predeterminada dinámica].Columns[ID]"
+                      cachedDataType="r8"
+                      cachedName="ID"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Describe cómo participa la columna de entrada en la operación de dinamización. Puede ayudar a definir un conjunto de registros relacionados; puede contener la clave que identifica de forma exclusiva una fila dentro del conjunto relacionado y sobre la que se dinamizan los valores; puede contener un valor que se transfiere a una columna dinamizada o puede contener un valor que pasa directamente sin ningún cambio."
+                          name="PivotUsage">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Inputs[Entrada predeterminada dinámica].Columns[Meses]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Meses"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Meses]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Describe cómo participa la columna de entrada en la operación de dinamización. Puede ayudar a definir un conjunto de registros relacionados; puede contener la clave que identifica de forma exclusiva una fila dentro del conjunto relacionado y sobre la que se dinamizan los valores; puede contener un valor que se transfiere a una columna dinamizada o puede contener un valor que pasa directamente sin ningún cambio."
+                          name="PivotUsage">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Inputs[Entrada predeterminada dinámica].Columns[Monto]"
+                      cachedDataType="r8"
+                      cachedName="Monto"
+                      lineageId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Describe cómo participa la columna de entrada en la operación de dinamización. Puede ayudar a definir un conjunto de registros relacionados; puede contener la clave que identifica de forma exclusiva una fila dentro del conjunto relacionado y sobre la que se dinamizan los valores; puede contener un valor que se transfiere a una columna dinamizada o puede contener un valor que pasa directamente sin ningún cambio."
+                          name="PivotUsage">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica]"
+                  name="Salida predeterminada dinámica">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[ID]"
+                      name="ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[ID]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_ [Abril]_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_ [Abril]_Monto]"
+                      name="C_ [Abril]_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue"> [Abril]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Agosto_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Agosto_Monto]"
+                      name="C_Agosto_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Agosto</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Diciembre_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Diciembre_Monto]"
+                      name="C_Diciembre_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Diciembre</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Enero_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Enero_Monto]"
+                      name="C_Enero_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Enero</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Febrero_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Febrero_Monto]"
+                      name="C_Febrero_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Febrero</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Julio_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Julio_Monto]"
+                      name="C_Julio_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Julio</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Junio_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Junio_Monto]"
+                      name="C_Junio_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Junio</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Marzo_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Marzo_Monto]"
+                      name="C_Marzo_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Marzo</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Mayo_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Mayo_Monto]"
+                      name="C_Mayo_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Mayo</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Noviembre_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Noviembre_Monto]"
+                      name="C_Noviembre_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Noviembre</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Octubre_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Octubre_Monto]"
+                      name="C_Octubre_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Octubre</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Septiembre_Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica].Columns[C_Septiembre_Monto]"
+                      name="C_Septiembre_Monto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="El identificador de linaje de una columna de entrada que contiene un valor PivotedValue o el valor -1. El valor -1 indica que la columna no se usa en una operación de dinamización"
+                          name="SourceColumn">#{Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1].Columns[Monto]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Especifica un valor que coincide con uno de los valores posibles de la columna de entrada que está marcada como clave dinámica en la propiedad PivotUsage."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Septiembre</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida de error dinámica]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error dinámica"
+                  synchronousInputId="Package\Tarea Flujo de datos\Dinamización.Inputs[Entrada predeterminada dinámica]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida de error dinámica].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida de error dinámica].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida de error dinámica].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida de error dinámica].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Origen de Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Origen de Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ID]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Meses]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Meses]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Meses]"
+                      name="Meses"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Monto]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Monto]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Monto]"
+                      name="Monto"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Meses]"
+                      dataType="wstr"
+                      length="255"
+                      name="Meses" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Monto]"
+                      dataType="r8"
+                      name="Monto" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Meses]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Meses]"
+                      name="Meses" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Monto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Monto]"
+                      name="Monto" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
+              endId="Package\Tarea Flujo de datos\Dinamización.Inputs[Entrada predeterminada dinámica]"
+              name="Salida de agregado 1"
+              startId="Package\Tarea Flujo de datos\Agregado.Outputs[Salida de agregado 1]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+              endId="Package\Tarea Flujo de datos\Agregado.Inputs[Entrada de agregado 1]"
+              name="Salida de origen de Excel"
+              startId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida predeterminada dinámica]"
+              endId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+              name="Salida predeterminada dinámica"
+              startId="Package\Tarea Flujo de datos\Dinamización.Outputs[Salida predeterminada dinámica]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="286,199" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Tarea Flujo de datos\Origen de Excel"
+          TopLeft="219,36" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Tarea Flujo de datos\Agregado"
+          TopLeft="263,116" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+          TopLeft="295.5,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.5,38"
+              Start="0,0"
+              End="29.5,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="4,19" />
+                  <mssgle:LineSegment
+                    End="25.5,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.5,19"
+                    Point2="29.5,19"
+                    Point3="29.5,23" />
+                  <mssgle:LineSegment
+                    End="29.5,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Tarea Flujo de datos\Dinamización"
+          TopLeft="295,199" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de agregado 1]"
+          TopLeft="325,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.5,41"
+              Start="0,0"
+              End="40.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="36.5,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.5,20.5"
+                    Point2="40.5,20.5"
+                    Point3="40.5,24.5" />
+                  <mssgle:LineSegment
+                    End="40.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Tarea Flujo de datos\Destino de archivo plano"
+          TopLeft="341,281" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida predeterminada dinámica]"
+          TopLeft="365.5,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,40"
+              Start="0,0"
+              End="73,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
+                  <mssgle:LineSegment
+                    End="69,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69,20"
+                    Point2="73,20"
+                    Point3="73,24" />
+                  <mssgle:LineSegment
+                    End="73,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
