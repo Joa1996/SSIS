@@ -1,0 +1,37 @@
+Bicicleta,Bicicleta de montaña,1,1,Bikes,Vélo,1,1,Mountain Bikes,VTT,1
+Bicicleta,Bicicleta de carretera,1,1,Bikes,Vélo,2,2,Road Bikes,Vélo de route,1
+Bicicleta,Bicicleta de paseo,1,1,Bikes,Vélo,3,3,Touring Bikes,Vélo de randonnée,1
+Componente,Rueda,2,2,Components,Composant,17,17,Wheels,Roue,2
+Componente,Cuadro de paseo,2,2,Components,Composant,16,16,Touring Frames,Cadre de vélo de randonnée,2
+Componente,Sillín,2,2,Components,Composant,15,15,Saddles,Selle,2
+Componente,Cuadro de carretera,2,2,Components,Composant,14,14,Road Frames,Cadre de vélo de route,2
+Componente,Pedal,2,2,Components,Composant,13,13,Pedals,Pédale,2
+Componente,Cuadro de montaña,2,2,Components,Composant,12,12,Mountain Frames,Cadre de VTT,2
+Componente,Dirección,2,2,Components,Composant,11,11,Headsets,Jeu de direction,2
+Componente,Desviador,2,2,Components,Composant,9,9,Derailleurs,Dérailleur,2
+Componente,Bielas,2,2,Components,Composant,8,8,Cranksets,Pédalier,2
+Componente,Cadena,2,2,Components,Composant,7,7,Chains,Chaîne,2
+Componente,Frenos,2,2,Components,Composant,6,6,Brakes,Freins,2
+Componente,Eje de pedalier,2,2,Components,Composant,5,5,Bottom Brackets,Axe de pédalier,2
+Componente,Barra,2,2,Components,Composant,4,4,Handlebars,Barre d'appui,2
+Componente,Horquilla,2,2,Components,Composant,10,10,Forks,Fourche,2
+Prenda,Calcetines,3,3,Clothing,Vêtements,23,23,Socks,Chaussettes,3
+Prenda,Camiseta,3,3,Clothing,Vêtements,25,25,Vests,Veste,3
+Prenda,Mallas,3,3,Clothing,Vêtements,24,24,Tights,Collants,3
+Prenda,Pantalones cortos,3,3,Clothing,Vêtements,22,22,Shorts,Cuissards,3
+Prenda,Gorra,3,3,Clothing,Vêtements,19,19,Caps,Casquette,3
+Prenda,Guantes,3,3,Clothing,Vêtements,20,20,Gloves,Gants,3
+Prenda,Culote corto,3,3,Clothing,Vêtements,18,18,Bib-Shorts,Cuissards avec bretelles,3
+Prenda,Jersey,3,3,Clothing,Vêtements,21,21,Jerseys,Maillot,3
+Accesorio,Cesta,4,4,Accessories,Accessoire,35,35,Panniers,Sacoche,4
+Accesorio,Candado,4,4,Accessories,Accessoire,34,34,Locks,Antivol,4
+Accesorio,Luz,4,4,Accessories,Accessoire,33,33,Lights,Éclairage,4
+Accesorio,Sistema de hidratación,4,4,Accessories,Accessoire,32,32,Hydration Packs,Sac d'hydratation,4
+Accesorio,Casco,4,4,Accessories,Accessoire,31,31,Helmets,Casque,4
+Accesorio,Guardabarros,4,4,Accessories,Accessoire,30,30,Fenders,Garde-boue,4
+Accesorio,Portabotellas y botella,4,4,Accessories,Accessoire,28,28,Bottles and Cages,Bidon et porte-bidon,4
+Accesorio,Soporte para bicicletas,4,4,Accessories,Accessoire,27,27,Bike Stands,Range-vélo,4
+Accesorio,Portabicicletas,4,4,Accessories,Accessoire,26,26,Bike Racks,Porte-vélo,4
+Accesorio,Bomba,4,4,Accessories,Accessoire,36,36,Pumps,Pompe,4
+Accesorio,Limpiador,4,4,Accessories,Accessoire,29,29,Cleaners,Nettoyant,4
+Accesorio,Cubierta y cámara,4,4,Accessories,Accessoire,37,37,Tires and Tubes,Pneu et chambre à air,4

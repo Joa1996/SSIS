@@ -1,0 +1,3 @@
+CustID,Name,ShortName
+6,Andres,Andri
+7,Mauro,Mau
