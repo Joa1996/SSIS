@@ -1,0 +1,3 @@
+CustomerName,CustomerRegion,SaleAmmt
+Jorge,NA,2000
+Fred,NA,5000

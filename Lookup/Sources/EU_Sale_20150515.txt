@@ -1,0 +1,3 @@
+CustomerName,CustomerRegion,SaleAmmt
+Robert,EU,2000
+Jhon,EU,5000

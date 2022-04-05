@@ -1,0 +1,7 @@
+Id	Vendedor	Cant.Ventas
+1	Jose Pablo	677
+2	Carlos Juarez	455
+3	Mario Perez	877
+4	Sofia Allende	67
+5	Carla Mareyra	566
+6       Mariano Peree	766
